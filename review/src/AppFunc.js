@@ -2,24 +2,24 @@ import React, { useState, useEffect } from "react";
 
 const AppFunc = () => {
   const [name, setName] = useState("Warren");
+  console.log("AppFunc: State setup.");
+
   const handleClick = () => {
     setName("Allison");
   };
-  console.log("APPFUNC: Component Constructed");
-
+  
   useEffect(()=>{
-    console.log("APPFUNC: Component Mounted");
+    console.log("AppFunc: Component has mounted.");
   }, []);
 
   useEffect(()=>{
-    console.log("APPFUNC: Component Updated");
+    console.log("AppFunc: Component has updated.");
   });
 
-  console.log("APPFUNC: Component Rendered");
+  console.log("AppFunc: Component has rendered.");
   return (
     <div>
       <h1>Hello {name}!</h1>
-  
       <button onClick={handleClick}>MAKE IT ALLISON!</button>
     </div>
   );

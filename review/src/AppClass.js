@@ -6,7 +6,7 @@ class AppClass extends React.Component {
     this.state = {
       name: "Warren"
     };
-    console.log("APPCLASS: Component Constructed");
+    console.log("AppClass: Component State Setup.");
   }
 
   handleNameButtonClick = (e) => {
@@ -17,23 +17,15 @@ class AppClass extends React.Component {
   };
 
   componentDidMount() {
-    console.log("APPCLASS: Component Mounted");
+    console.log("AppClass: Component mounted.");
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    console.log("APPCLASS: Component Updated");
-    console.log("PROPS---------------");
-    console.log(prevProps, this.props);
-    console.log("STATE---------------");
-    console.log(prevState, this.state);
-
-    if(this.state.name !== prevState.name) {
-      
-    }
+  componentDidUpdate() {
+    console.log("AppClass: Component updated.");
   }
 
   render() {
-    console.log("APPCLASS: Component Rendered");
+    console.log("AppClass: Component rendered.");
     return (
       <div>
         <h1>Hello {this.state.name}.</h1>
